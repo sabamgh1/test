@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src='https://kit.fontawesome.com/257f358590.js' crossorigin='anonymous'></script>
+
+</head>
+<body dir="rtl" style="background-image: url(css/pics/cute-blue-for-simple-for---background.jpeg); background-repeat: no-repeat; background-size: cover;">
+    <div class="style1 text-center container">
+        <br>
+        <div>
+            <img id="pic" src="css/pics/1.1.jpg" alt="">
+        </div>
+        
+        <h style="font-size: 50px;">LOGIN</h>
+        <br> <br>
+        <div>
+            <button onclick="show()"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+              </svg></button> <input id="inp1" type="password" placeholder="password" style="text-align: center;">
+        </div>
+        <br>
+        <div>
+            <button onclick="login()">login</button> <input id="inp2" type="text" placeholder="username" style="text-align: center;">
+</body>
+<script src="css/bootstrap/js/bootstrap.js"></script>
+<script>
+    function show(){
+        debugger;
+        var imgv=document.getElementById("pic").getAttribute('src');
+        if (imgv == "css/pics/1.1.jpg") {
+        document.getElementById("pic").src="css/pics/1.2.jpg"
+        document.getElementById("inp1").setAttribute("type" , "text")
+            
+        }
+        else{
+            
+        document.getElementById("pic").src="css/pics/1.1.jpg"
+        document.getElementById("inp1").setAttribute("type" , "password")
+        }
+    }
+    function login(){
+        var usr = document.getElementById("inp1").value
+        var pss = document.getElementById("inp2").value
+        if (usr == "saba" && pss == "1234") {
+            alert("welcom")
+        }
+        else{alert("try again")}
+
+
+    }
+</script>
+</html>
